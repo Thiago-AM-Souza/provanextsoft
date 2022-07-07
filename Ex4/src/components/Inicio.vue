@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 class="title mt-5">Página Inicial</h1>
+        <h1 class="title mt-3">Página Inicial</h1>
     </div>
 </template>
 

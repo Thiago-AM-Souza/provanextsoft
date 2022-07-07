@@ -42,7 +42,12 @@ namespace Ex2.Services
 
         public async Task Update(int id, Apartamento apartamento)
         {
-            await _repository.Update(id, apartamento);
+            var ap = apartamento;
+            var cond = _condominioRepository.FindById(apartamento.CondominioId).Result;
+            ap.Condominio = cond;
+            ap.FracaoIdeal = Math.Round((ap.AreaTotal * 100) / ap.Condominio.AreaTotal, 2);
+            ap.ValorProporcionalIptu = Math.Round((ap.Condominio.ValorIptu * ap.FracaoIdeal) / 100, 2);
+            await _repository.Update(id, ap);
         }
 
         public async Task Delete(int id)

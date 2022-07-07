@@ -7,7 +7,7 @@
 </template>
 
 <script>
-//import TesteVue from './components/Teste.vue'
+
 import MenuVue from './components/template/Menu.vue'
 
 export default {

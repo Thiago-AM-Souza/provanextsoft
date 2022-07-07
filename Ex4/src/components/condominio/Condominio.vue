@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
+    <div class="container flex">
         <h1>Lista de Condominios</h1>
         <router-link to="/condominiocreate"><button class="btn btn-primary">Cadastrar novo</button></router-link>
-        <div class="d-flex flex-wrap">
+        <div class="row">
             <CondominioCard v-for="condominio of condominios" 
                 :key="condominio.id"
                 :id="condominio.id"

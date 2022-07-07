@@ -40,8 +40,7 @@ export default {
     },
     methods:{
         atualizar(){
-            // eslint-disable-next-line no-unused-vars
-            Condominio.atualizar(this.condominio).then(resposta => {
+            Condominio.atualizar(this.condominio).then(() => {
                 alert('Atualizado com sucesso!')
             });
         }

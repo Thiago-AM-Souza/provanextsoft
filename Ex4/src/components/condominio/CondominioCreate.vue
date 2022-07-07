@@ -1,5 +1,3 @@
-<!-- eslint-disable no-unused-vars -->
-<!-- eslint-disable no-unused-vars -->
 <template lang="">
     <div class="container">
             <form @submit.prevent="salvar">
@@ -39,8 +37,7 @@ export default {
     },
     methods:{
         salvar(){
-            // eslint-disable-next-line no-unused-vars
-            Condominio.salvar(this.condominio).then(resposta => {
+            Condominio.salvar(this.condominio).then(() => {
                 alert('Salvo com sucesso!')
             });
         }

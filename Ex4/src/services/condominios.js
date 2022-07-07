@@ -1,5 +1,5 @@
 
-//import { get } from 'core-js/core/dict';
+
 import { http } from './config';
 
 export default {
